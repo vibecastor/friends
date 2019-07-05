@@ -10,6 +10,9 @@ defmodule Friends.Application do
     children = [
       # Starts a worker by calling: Friends.Worker.start_link(arg)
       # {Friends.Worker, arg}
+
+      # Setup Friends.Repo as a supervisor within the apps supervision tree
+      Friends.Repo
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
